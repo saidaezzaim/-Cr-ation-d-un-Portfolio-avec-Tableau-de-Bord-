@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-glass nav-creative">
+            <div class="logo-gradient">Contact</div>
+            <ul class="nav-links nav-creative-links">
+                <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="projects.html" class="nav-btn"><i class="fas fa-folder-open"></i> Projects</a></li>
+                <li><a href="contact.html" class="nav-btn active"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin/login.html" class="nav-btn admin-link"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact-page contact-glass">
+        <h1>Contactez-moi</h1>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-glass">Envoyer</button>
+        </form>
+        <div class="contact-info">
+            <h2>Mes coordonnées</h2>
+            <p><i class="fas fa-envelope"></i> saidaezzaim@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +212 614889036</p>
+            <p><i class="fas fa-map-marker-alt"></i> Tinghir, Maroc</p>
+        </div>
+    </main>
+    <footer class="footer-glass">
+        <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#" class="social-glass"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-glass"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-glass"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+<style>
+body {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    color: #f5f7fa;
+}
+.nav-glass {
+    background: rgba(44,62,80,0.92);
+    color: #f5f7fa;
+}
+.logo-gradient {
+    background: linear-gradient(90deg, #e67e22, #f39c12, #e0eafc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: slideInLeft 1s ease;
+}
+.nav-links, .nav-creative-links {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+}
+.nav-btn, .nav-links a {
+    color: #f5f7fa;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.7rem 1.7rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e67e2244;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-shadow: 0 2px 8px #e67e2222;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.nav-btn:hover, .nav-btn:focus, .nav-links a:hover {
+    background: linear-gradient(90deg, #f39c12 60%, #e67e22 100%);
+    color: #fff;
+    box-shadow: 0 6px 24px #e67e2288;
+    transform: scale(1.08);
+}
+.info-glass, .about-glass, .projects-glass, .contact-glass {
+    background: rgba(44,62,80,0.92);
+    color: #f8f8f8;
+}
+.contact-page h1,
+.projects-page h1 {
+    color: #f8f8f8;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+.skill-categories {
+    background: rgba(44,62,80,0.92);
+    color: #f5f7fa;
+}
+.footer-glass {
+    background: rgba(44,62,80,0.92);
+    color: #f5f7fa;
+}
+.social-glass {
+    background: rgba(255,255,255,0.12);
+    color: #f5f7fa;
+}
+.project-info p, .project-category, .form-group label, .contact-info p {
+    color: #e0eafc !important;
+}
+.form-group label,
+.contact-info h2,
+.contact-info p {
+    color: #111 !important;
+}
+.form-group input,
+.form-group textarea {
+    color: #f8f8f8 !important;
+    background: #232526 !important;
+    border: 1px solid #e67e22;
+}
+::placeholder {
+    color: #bfc9d1 !important;
+    opacity: 1;
+}
+.filter-btn,
+.project-links a {
+    color: #f8f8f8;
+}
+.contact-glass {
+    background: rgba(255,255,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(52,152,219,0.08);
+    margin: 3rem auto;
+    padding: 4rem 2rem;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+.contact-page h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    background: linear-gradient(90deg, #e67e22, #f39c12);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.form-group label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.form-group input,
+.form-group textarea {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px #e67e2222;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 2px 12px #e67e22;
+}
+.btn-glass {
+    background: linear-gradient(90deg, #e67e22 60%, #f39c12 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px #e67e2244;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.9rem 2rem;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.btn-glass:hover {
+    background: linear-gradient(90deg, #f39c12 60%, #e67e22 100%);
+    box-shadow: 0 4px 24px #e67e2288;
+    transform: scale(1.05);
+}
+.contact-info {
+    background: #f9f9f9;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e67e2222;
+    margin-top: 2rem;
+}
+.contact-info h2 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+.contact-info p {
+    margin-bottom: 0.7rem;
+    color: #555;
+    font-size: 1rem;
+}
+.contact-info i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+.nav-creative {
+    background: rgba(34,34,34,0.92);
+    box-shadow: 0 8px 32px #e67e2244;
+    border-radius: 0 0 32px 32px;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.logo-gradient {
+    background: linear-gradient(90deg, #e67e22, #f39c12, #e0eafc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: slideInLeft 1s ease;
+}
+.nav-creative-links {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+}
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: linear-gradient(90deg, #e67e22 60%, #f39c12 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.7rem 1.7rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e67e2244;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-shadow: 0 2px 8px #e67e2222;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.nav-btn.active {
+    background: linear-gradient(90deg, #f39c12 60%, #e67e22 100%);
+    box-shadow: 0 6px 24px #e67e2288;
+    transform: scale(1.08);
+}
+.nav-btn i {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+.nav-btn:hover, .nav-btn:focus {
+    background: linear-gradient(90deg, #f39c12 60%, #e67e22 100%);
+    color: #fff;
+    box-shadow: 0 6px 24px #e67e2288;
+    transform: scale(1.08);
+}
+.nav-btn:active {
+    transform: scale(0.98);
+}
+@media (max-width: 700px) {
+    .contact-glass {
+        padding: 2rem 1rem;
+    }
+}
+@media (max-width: 900px) {
+    .nav-creative {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1rem 1rem;
+    }
+    .nav-creative-links {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .logo-gradient {
+        font-size: 1.7rem;
+    }
+}
+</style>
